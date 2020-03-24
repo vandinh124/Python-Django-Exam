@@ -1,0 +1,35 @@
+.head{
+    width: 970px;
+    height: 30px;
+    display: block;
+}
+
+.head a{
+    display: inline-block;
+    margin-left: 200px;
+    font-size: 20px;
+}
+
+
+h1{
+    display: inline-block;
+    width: 250px;
+    margin: 0px;
+}
+
+div.quotes{
+    width: 500px;
+    display: inline-block;
+    margin-top: 30px;
+    
+}
+
+
+div.add_quote{
+
+    width: 500px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+    margin-left: 200px;
+}

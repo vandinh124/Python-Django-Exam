@@ -1,0 +1,16 @@
+div.container{
+    width: 500px;
+    display: inline-block;
+    vertical-align: top;   
+    
+}
+ul{
+    width: 300px;
+}
+
+button{
+    border-radius: 5px;
+    border: 2px solid lightblue;
+    background-color: lightblue;
+    
+}

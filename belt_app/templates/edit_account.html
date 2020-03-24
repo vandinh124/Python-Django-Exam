@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/quotes.css' %}">  
+</head>
+<body>
+    <div class = "head">        
+        <a href = "/quotes">Back</a>
+        <a href = "/logout">Log out</a>
+        <hr>
+    </div>
+    <div class="edit_acc">
+        {% if messages %}
+        <ul class="messages">    
+        {% for message in messages %}             
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+        {% endfor %}
+        </ul>
+        {% endif %}
+        <form action="/edit" method="post">
+            {% csrf_token %}
+            <h2>Edit My Account</h2>
+            <p>First Name</p>
+            <input type = "text" name = "first_name" value = "{{user.first_name}}">
+            <p>Last Name</p>
+            <input type = "text" name = "last_name">
+            <p>Email</p>
+            <input type = "text" name = "email">
+            <input type = "submit" value = "Udpate">
+        </form>
+
+    </div>
+</body>
+</html>
